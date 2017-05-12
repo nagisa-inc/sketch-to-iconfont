@@ -1,0 +1,58 @@
+@charset 'utf-8';
+
+/*---------------------------------------------------------------------------
+ * <%= font_name %>
+ *---------------------------------------------------------------------------/
+
+
+/*
+ * variables
+ */
+$font-path: '<%= @options[:preprocessor_path] %>' !default;
+
+
+/*
+ * font path
+ */
+@font-face {
+  font-family: '<%= font_name %>';
+  src: url('#{$font-path}<%= font_name %>.eot');
+  src: url('#{$font-path}<%= font_name %>.eot?#iefix') format('embedded-opentype'),
+       url('#{$font-path}<%= font_name %>.woff') format('woff'),
+       url('#{$font-path}<%= font_name %>.ttf') format('truetype'),
+       url('#{$font-path}<%= font_name %>.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*
+ * basic class
+ */
+.<%= font_name %> {
+  font-family: <%= font_name %>;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  display: inline-block;
+  text-transform: none;
+
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*
+ * all glyphs
+ */
+<%= glyphs %>
+
+
+/*
+ * mixin
+ */
+@mixin <%= font_name %>($name) {
+  @extend .<%= font_name %>;
+  @extend .<%= font_name %>-#{$name}:before;
+}

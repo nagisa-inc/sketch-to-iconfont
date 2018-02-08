@@ -10,10 +10,10 @@
 # -----------------------------------------------------------------------------
 
 # The font's name. Also determines the file names of generated templates.
-font_name: nagisa-iconfont
+font_name: zero-font
 
 # Format of CSS selectors. {{glyph}} is substituted for the glyph name.
-css_selector: .nf-{{glyph}}
+css_selector: .zero-font-{{glyph}}
 
 # Generate fonts without asset-busting hashes.
 no_hash: true
@@ -70,8 +70,8 @@ output:
 # -----------------------------------------------------------------------------
 
 templates:
-  - nagisa-font-variables.css
-  - nagisa-font.css
+  - zero-font.css
+  - variables-zero-font.css
 
 preprocessor_path: /fonts
 

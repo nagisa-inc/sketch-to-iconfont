@@ -4,32 +4,30 @@
 - node.js
 - npm
 - fontforge (This is required unfortunately. You gonna have to install this as globally)
+- eot-utils
+- woff2
 
 
-### On Mac
+
+## Set up
+### Install global dependencies
 ```
+$ brew tap bramstein/webfonttools
 $ brew install fontforge --with-python
-$ brew install eot-utils
+$ brew install eot-utils woff2
+```
+
+### Install local dependencies
+```
 $ gem install bundle
-```
-
-### On Linux
-```
-$ sudo apt-get install fontforge
-$ wget http://people.mozilla.com/~jkew/woff/woff-code-latest.zip
-$ unzip woff-code-latest.zip -d sfnt2woff && cd sfnt2woff && make && sudo mv sfnt2woff /usr/local/bin/
-$ gem install bundle
-```
-
-
-### Project
-```
-$ npm install
+$ yarn install
 $ vi fontcustom.yml
 ```
 
 
 ### Build
 ```
-$ path=path/to.sketch npm run generate
+$ path=path/to.sketch npm start
 ```
+
+demo.sketch will selected if `path` option is empty or undefined.

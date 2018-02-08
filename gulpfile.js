@@ -1,7 +1,5 @@
-'use strict';
-
-import gulp from 'gulp';
-import sketch from 'gulp-sketch';
+const gulp = require('gulp');
+const sketch = require('gulp-sketch');
 
 
 /*------------------------------------------------------------------------------

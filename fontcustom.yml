@@ -51,7 +51,7 @@ input:
 
 output:
   fonts: lib/fonts
-  css: lib/scss
+  css: lib/css
   scss: lib/scss
 
 
@@ -70,7 +70,8 @@ output:
 # -----------------------------------------------------------------------------
 
 templates:
-  - _nagisa-font.scss
+  - nagisa-font-variables.css
+  - nagisa-font.css
 
 preprocessor_path: /fonts
 
@@ -91,3 +92,5 @@ font_em: 512
 
 # Horizontally fit glyphs to their individual vector widths.
 autowidth: true
+
+css3: true

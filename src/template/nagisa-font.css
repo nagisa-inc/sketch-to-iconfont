@@ -1,0 +1,45 @@
+@charset 'utf-8';
+
+/*---------------------------------------------------------------------------
+ * <%= font_name %>
+ *---------------------------------------------------------------------------/
+
+
+/**
+ * font path
+ */
+@font-face {
+  font-family: '<%= font_name %>';
+  src: url('<%= @options[:preprocessor_path] %>/<%= font_name %>.eot');
+  src: url('<%= @options[:preprocessor_path] %>/<%= font_name %>.eot?#iefix') format('embedded-opentype'),
+       url('<%= @options[:preprocessor_path] %>/<%= font_name %>.woff') format('woff'),
+       url('<%= @options[:preprocessor_path] %>/<%= font_name %>.woff2') format('woff2'),
+       url('<%= @options[:preprocessor_path] %>/<%= font_name %>.ttf') format('truetype'),
+       url('<%= @options[:preprocessor_path] %>/<%= font_name %>.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/**
+ * basic class
+ */
+.<%= font_name %> {
+  /* stylelint-disable font-family-no-missing-generic-family-keyword */
+  font-family: '<%= font_name %>';
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  display: inline-block;
+  text-transform: none;
+
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/**
+ * all glyphs
+ */
+<%= glyphs %>

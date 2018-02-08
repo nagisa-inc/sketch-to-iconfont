@@ -15,14 +15,16 @@
 $ brew tap bramstein/webfonttools
 $ brew install fontforge --with-python
 $ brew install eot-utils woff2
+$ gem install bundle
 ```
 
 ### Install local dependencies
 ```
-$ gem install bundle
 $ yarn install
-$ vi fontcustom.yml
+$ bundle install
 ```
+
+Edit `fontcustom.yml` as you need.
 
 
 ### Build

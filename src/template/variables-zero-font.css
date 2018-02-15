@@ -31,19 +31,18 @@
  * mixin
  */
 @define-mixin <%= font_name %> $name {
-  /* stylelint-disable font-family-no-missing-generic-family-keyword */
-  font-family: '<%= font_name %>';
-  font-weight: normal;
-  font-style: normal;
-  font-variant: normal;
-  display: inline-block;
-  text-transform: none;
-
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
   &<%= pseudo_element %> {
-    content: var(--<%= font_name %>-$name);
+    /* stylelint-disable font-family-no-missing-generic-family-keyword */
+    font-family: 'zero-font';
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    display: block;
+    content: var(--zero-font-$name);
+    text-transform: none;
+    text-rendering: auto;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }

@@ -13,9 +13,9 @@
 ### Install global dependencies
 ```
 $ brew tap bramstein/webfonttools
-$ brew install fontforge --with-python
+$ brew install fontforge
 $ brew install eot-utils woff2
-$ gem install bundle
+$ gem install bundler
 ```
 
 ### Install local dependencies
